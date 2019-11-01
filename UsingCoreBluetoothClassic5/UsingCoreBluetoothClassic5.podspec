@@ -28,7 +28,7 @@ Pod::Spec.new do |spec|
                    蓝牙连接、list bt connected name、request、response data（notify，write，read）
                    DESC
 
-  spec.homepage     = "[https://github.com/huahuali](https://github.com/huahuali)" # 你的主页
+  spec.homepage     = 'https://github.com/huahuali/snifferData' # 你的主页
   # spec.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
@@ -80,7 +80,8 @@ spec.platform     = :ios, "10.0" #xcode11.1 模拟器只到12.4，如果填写13
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  spec.source       = { :git => "https://github.com/huahuali/snifferData.git", :tag => "#{spec.version}" }
+#项目git地址,tag值以v开头,支持子模块(子模块是git的子模块)
+  spec.source = { :git => "https://github.com/huahuali/snifferData.git", :tag => "v#{spec.version}", :submodules => true }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -91,7 +92,7 @@ spec.platform     = :ios, "10.0" #xcode11.1 模拟器只到12.4，如果填写13
   #  Not including the public_header_files will make all headers public.
   #
 
-  spec.source_files  = "CoreBluetoothClassicSample/*.{h,m,swift}"
+  spec.source_files  = 'Classes/**/*.{h,m,swift}' #UsingCoreBluetoothClassic5/Classes/*.{h,m,swift}'
   #spec.exclude_files = "max_podspec/Exclude"
 
   # spec.public_header_files = "Classes/**/*.h"
